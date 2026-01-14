@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{times}
+
+% Remove cabeçalho e rodapé
+\pagestyle{empty}
+
+% Configurações de espaçamento
+\setlength{\parindent}{1.25cm}
+\onehalfspacing
+
+% Comando para o cabeçalho
+\newcommand{\cabecalho}{%
+\begin{center}
+\textbf{{{NOME_ORGAO}}}\\
+\vspace{0.3cm}
+\end{center}
+}
+
+\begin{document}
+
+% Cabeçalho
+\cabecalho
+
+% Tipo e número do memorando
+\noindent\textbf{Memorando nº {{NUMERO}}/{{ANO}}-{{SIGLA_ORGAO}}}
+
+\vspace{0.5cm}
+
+% Data
+\noindent{{CIDADE}}, {{DATA_EXTENSO}}.
+
+\vspace{0.5cm}
+
+% Destinatário
+\noindent\textbf{Para:} {{DESTINATARIO_SETOR}}
+
+\vspace{0.3cm}
+
+% Assunto
+\noindent\textbf{Assunto:} {{ASSUNTO}}
+
+\vspace{1cm}
+
+% Corpo do texto
+{{CORPO_TEXTO}}
+
+\vspace{2cm}
+
+% Assinatura
+\begin{center}
+\rule{7cm}{0.5pt}\\
+\textbf{{{NOME_SIGNATARIO}}}\\
+{{CARGO_SIGNATARIO}}
+\end{center}
+
+\end{document}

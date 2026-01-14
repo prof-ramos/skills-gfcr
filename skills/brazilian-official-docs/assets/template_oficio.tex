@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{times}
+
+% Remove numeração de páginas na primeira página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\thepage}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% Configurações de espaçamento
+\setlength{\parindent}{1.25cm}
+\onehalfspacing
+
+% Comando para o timbre (substituir por logo real)
+\newcommand{\timbre}{%
+\begin{center}
+\textbf{REPÚBLICA FEDERATIVA DO BRASIL}\\
+\textbf{{{NOME_ORGAO}}}\\
+\vspace{0.5cm}
+\end{center}
+}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+% Timbre
+\timbre
+
+% Tipo e número do ofício
+\noindent\textbf{Ofício nº {{NUMERO}}/{{ANO}}-{{SIGLA_ORGAO}}}
+
+\vspace{1cm}
+
+% Local e data
+\noindent{{CIDADE}}, {{DATA_EXTENSO}}.
+
+\vspace{1cm}
+
+% Destinatário
+\noindent A Sua Excelência o Senhor\\
+\textbf{{{NOME_DESTINATARIO}}}\\
+{{CARGO_DESTINATARIO}}\\
+{{ENDERECO_DESTINATARIO}}\\
+{{CIDADE_DESTINATARIO}} - {{UF_DESTINATARIO}}
+
+\vspace{1cm}
+
+% Assunto
+\noindent\textbf{Assunto:} {{ASSUNTO}}
+
+\vspace{1cm}
+
+% Vocativo
+\noindent{{VOCATIVO}},
+
+\vspace{0.5cm}
+
+% Corpo do texto (usar \par para parágrafos)
+{{CORPO_TEXTO}}
+
+\vspace{1cm}
+
+% Fecho
+\noindent{{FECHO}},
+
+\vspace{2cm}
+
+% Assinatura
+\begin{center}
+\rule{7cm}{0.5pt}\\
+\textbf{{{NOME_SIGNATARIO}}}\\
+{{CARGO_SIGNATARIO}}
+\end{center}
+
+\end{document}

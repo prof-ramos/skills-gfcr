@@ -1,0 +1,18 @@
+.DS_Store
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+node_modules/
+.idea/
+.vscode/
+*.log
+# Distribution / Build
+dist/
+build/
+*.egg-info/
+# Ignorar zips genéricos, mas manter a pasta de skills
+**/*.zip
+**/*.skill
+!skills/
